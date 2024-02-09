@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html lang="en" ng-App="DIApp">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="../angular.js"></script>
+    <script src="../Javascript/DependencyInjection.js"></script>
+</head>
+<body>
+    <h1>Dependency Injection</h1>
+ <div ng-controller="DependencyController" >
+<input ng-model="name" type="text" ng-blur="upper();">
+     <div> My name is {{name}}</div>
+    </div>
+</body>
+</html>

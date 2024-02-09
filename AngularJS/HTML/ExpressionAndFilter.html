@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en" ng-App="MsgApp">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="../angular.js"></script>
+    <script src="../Javascript/Expression.js"></script>
+</head>
+<body>
+    <h1>Expression and Interpolation</h1>
+ <div ng-controller="MsgController" >
+<input ng-model="name" type="text" ng-blur="upper();">
+    {{name}} has a message for you <br>
+    {{sayMessage()}}
+
+    <img ng-src="..//images/bear_{{stateOfBeing}}.jpeg">
+    <button ng-click="changeState()">{{buttonState}}</button>
+    Cost:{{cookieCost | currency : "Rs" : 4}}
+    </div>
+</body>
+</html>

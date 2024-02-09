@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html  >
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DigestCycle </title>
+    <!-- <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.8.2/angular.js"></script> -->
+    <!-- <script src="../Javascript/CustomAttributes.js"></script> -->
+</head>
+<body>
+    <h1>DigestCycle</h1>
+    <div id="target" greeting="hello" ng-App="myTestApp">
+        <section>
+            Section1
+            <article>
+                Article1
+            </article>
+        </section>   
+    </div>
+    <script>
+        var elem=document.getElementById('target');
+        // console.log(elem);
+        // console.log(elem.getAttribute('greeting'));
+        // console.log(elem.getAttribute('ng-App'));
+
+var elem2=document.querySelector("[ng-app]");
+console.log(elem2);
+console.log(elem2.getAttribute('ng-app'));
+    </script>
+    
+</body>
+</html>
