@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html ng-app='DigestApp'>
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DigestCycle </title>
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.8.2/angular.js"></script>
+    <script src="../Javascript/DigestandApply.js"></script>
+</head>
+
+<body>
+    <h1>DigestCycle</h1>
+    <div ng-controller='CounterController'>
+        <div>
+            <button ng-click="upCounter()">Increment </button>
+        </div>
+        <div>
+            Regular Counter {{counter}}
+        </div>
+    </div>
+
+</body>
+
+</html>
