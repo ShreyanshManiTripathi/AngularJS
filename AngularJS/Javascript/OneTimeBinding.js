@@ -2,42 +2,29 @@
     'use strict';
     angular.module('DigestApp', [])
 
-        .controller('CounterController', CounterController);
+        .controller('BindingController', BindingController);
 
-    CounterController.$inject = ['$scope', '$timeout'];
-    // $scope.name="Shreyansh";
-    function CounterController($scope, $timeout) {
+    BindingController.$inject = ['$scope'];
+    function BindingController($scope, ) {
         $scope.counter = 0;
+        $scope.firstName = "Shreyansh";
+        // $scope.fullName = "";
 
-
-
-        $scope.upCounter = function () {
-            $timeout(() => {
-                $scope.counter++;
-                console.log($scope.counter);
-            }, 2000);
-
+        $scope.showNumberOfWatchers = function () {
+            console.log("# of Watchers", $scope.$$watchersCount);
         }
 
-        // $scope.upCounter = function () {
-        //     setTimeout(() => {
-        //         $scope.$apply(function () {
-        //             $scope.counter++;
-        //             console.log($scope.counter);
-        //         })
-        //     }, 2000);
+       $scope.setFullName=function(){
+        $scope.fullName=$scope.firstName+" "+"Tripathi";
+       }
 
-        // }
-        // $scope.upCounter=function(){
-        //     setTimeout(() => {
+       $scope.logFirstName=function(){
+        console.log("First Name is:",$scope.firstName);
+       };
 
-        //         $scope.counter++;
-        //         console.log($scope.counter);
-        //         $scope.$digest();
-        //     }, 2000);
-
-        // }
-
+       $scope.logFullName=function(){
+        console.log("Full Name is:",$scope.fullName);
+       };
 
     }
 
