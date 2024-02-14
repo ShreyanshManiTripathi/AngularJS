@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html ng-app='ShoppingListApp'>
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DigestCycle </title>
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.8.2/angular.js"></script>
+    <script src="../Javascript/search.js"></script>
+</head>
+
+<body>
+    <h1>ng-repeat</h1>
+    <div ng-controller='ShoppingListController'>
+        <div>
+            <h3>Shopping List :</h3>
+            <input type="text" ng-model="search">
+            <ul>
+                <li ng-repeat="item in shoppingList |filter :search">{{item}}</li>
+            </ul>
+
+    </div>
+
+</body>
+
+</html>
